@@ -1,6 +1,6 @@
 NAME = span
 CXX = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -g3 -fsanitize=address -std=c++98
 SRCS = main.cpp Span.cpp
 OBJS = $(SRCS:.cpp=.o)
 

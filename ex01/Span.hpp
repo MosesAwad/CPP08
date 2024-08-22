@@ -13,6 +13,7 @@ class Span
 		Span();
 	public:
 		class maxSizeReached;
+		class spanTooSmall;
 		Span(unsigned int N);
 		Span& operator=(const Span& other);
 		Span(const Span& other);
@@ -22,9 +23,16 @@ class Span
 		int		shortestSpan();
 		int		longestSpan();
 		void	fill(std::vector<int>::iterator start, std::vector<int>::iterator end);
+		void	printSpan();
 };
 
 class Span::maxSizeReached : public std::exception
+{
+	public:
+		const char* what(void) const throw();
+};
+
+class Span::spanTooSmall : public std::exception
 {
 	public:
 		const char* what(void) const throw();
