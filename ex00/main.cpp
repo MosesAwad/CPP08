@@ -31,7 +31,7 @@ int main()
 
 		try
 		{
-			std::list<int>::iterator iter = easyfind(List, 5);
+			std::list<int>::iterator iter = easyfind(List, 18);
 			std::cout << "Found -> " << *iter << std::endl;
 		}
 		catch (std::exception& e)

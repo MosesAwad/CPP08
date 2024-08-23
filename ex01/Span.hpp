@@ -3,6 +3,8 @@
 # define SPAN_HPP
 
 #include <vector>
+#include <limits>
+#include <algorithm>
 #include <exception>
 
 class Span
@@ -20,10 +22,10 @@ class Span
 		~Span();
 
 		void 	addNumber(int x);
-		int		shortestSpan();
-		int		longestSpan();
+		int		shortestSpan() const;
+		int		longestSpan() const;
 		void	fill(std::vector<int>::iterator start, std::vector<int>::iterator end);
-		void	printSpan();
+		void	printSpan() const;
 };
 
 class Span::maxSizeReached : public std::exception

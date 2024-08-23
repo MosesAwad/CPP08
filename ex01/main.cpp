@@ -1,6 +1,8 @@
 
 #include "Span.hpp"
 #include <iostream>
+#include <cstdlib> // For srand and rand
+#include <ctime> // For time
 
 int main()
 {
@@ -116,7 +118,7 @@ int main()
 	}
 
 	std::cout << "-------" << std::endl;
-	std::cout << "Main 6 (Trying shortest and longest span on uninitalized values)" << std::endl;
+	std::cout << "Main 6 (Trying shortest and longest span on empty span with a non-zero max size)" << std::endl;
 	std::cout << "-------" << std::endl;		
 	{
 		Span sp = Span(20);

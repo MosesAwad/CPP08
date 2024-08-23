@@ -12,7 +12,11 @@ class NotFound : public std::exception
 
 /*
 	SRCS:
-	https://www.linkedin.com/pulse/dependent-names-rainer-grimm#:~:text=Trainer%20at%20Modernes%20C%2B%2B&text=A%20dependent%20name%20is%20essentially,the%20keywords%20typename%20or%20template.
+		https://www.linkedin.com/pulse/dependent-names-rainer-grimm#:~:text=Trainer%20at%20Modernes%20C%2B%2B&text=A%20dependent%20name%20is%20essentially,the%20keywords%20typename%20or%20template.
+
+	EXTRA:
+		Do not use a reference to find like int& find because for some reason, the std::find
+		function does not accept references.
 */
 template <typename T>
 typename T::iterator	easyfind(T& container, int find)
